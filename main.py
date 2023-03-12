@@ -35,6 +35,8 @@ async def check_ethusdt() -> None:
                       f'Максимальное изменение -'
                       f' {await get_max_change_in_percentage(start_price, max_price, min_price)}')
                 timer = 0
+            if timer > 3600 :
+                timer = 0
 
 
 if __name__ == '__main__':
